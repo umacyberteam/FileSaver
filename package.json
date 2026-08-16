@@ -1,0 +1,10 @@
+{
+  "name": "filesaver",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "FileSaver — simpan file sementara, ambil dari perangkat manapun.",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  }
+}

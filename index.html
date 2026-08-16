@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FileSaver — Titipkan File, Ambil di Perangkat Manapun</title>
+  <meta name="description" content="FileSaver menyimpan file dari satu perangkat dan membuatnya bisa diambil dari perangkat lain, cukup login dengan akun yang sama." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <nav class="fs-nav">
+    <div class="fs-container">
+      <a href="index.html" class="fs-nav__brand">File<span>Saver</span></a>
+      <div class="fs-nav__links">
+        <a href="login.html" class="fs-btn fs-btn--outline-on-ink fs-btn--sm" id="nav-login-link">Masuk</a>
+        <a href="register.html" class="fs-btn fs-btn--brass fs-btn--sm" id="nav-register-link">Daftar Gratis</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="fs-hero">
+    <div class="fs-container">
+      <div>
+        <span class="fs-hero__eyebrow">Penitipan file lintas perangkat</span>
+        <h1>Simpan di satu perangkat.<br><em>Ambil di perangkat lain</em>, kapan pun perlu.</h1>
+        <p class="fs-hero__lead">
+          Web permudah segala urusan pemindahan file dari perangkat manapun dan ke perangkat manapun.
+          Login di HP, unggah filenya. Login lagi di laptop dengan akun yang sama, filenya sudah menunggu.
+        </p>
+        <div class="fs-hero__cta">
+          <a href="register.html" class="fs-btn fs-btn--brass">Daftar Gratis</a>
+          <a href="login.html" class="fs-btn fs-btn--outline-on-ink">Sudah Punya Akun</a>
+        </div>
+        <span class="fs-hero__note">Diamankan Row Level Security &middot; ditenagai Supabase</span>
+      </div>
+
+      <div class="locker-wall" aria-hidden="true">
+        <div class="locker"><span class="locker__num">002</span></div>
+        <div class="locker"><span class="locker__num">007</span></div>
+        <div class="locker"><span class="locker__num">011</span></div>
+        <div class="locker"><span class="locker__num">013</span></div>
+        <div class="locker locker--open">
+          <span class="locker__num">014</span>
+          <span class="locker__slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+          </span>
+        </div>
+        <div class="locker"><span class="locker__num">019</span></div>
+        <div class="locker"><span class="locker__num">023</span></div>
+        <div class="locker"><span class="locker__num">028</span></div>
+        <div class="locker"><span class="locker__num">031</span></div>
+        <div class="locker"><span class="locker__num">034</span></div>
+        <div class="locker"><span class="locker__num">037</span></div>
+        <div class="locker"><span class="locker__num">042</span></div>
+        <div class="locker"><span class="locker__num">045</span></div>
+        <div class="locker"><span class="locker__num">049</span></div>
+        <div class="locker"><span class="locker__num">052</span></div>
+        <div class="locker"><span class="locker__num">056</span></div>
+        <div class="locker"><span class="locker__num">061</span></div>
+        <div class="locker"><span class="locker__num">064</span></div>
+        <div class="locker"><span class="locker__num">068</span></div>
+        <div class="locker"><span class="locker__num">073</span></div>
+        <div class="locker"><span class="locker__num">077</span></div>
+        <div class="locker"><span class="locker__num">081</span></div>
+        <div class="locker"><span class="locker__num">086</span></div>
+        <div class="locker"><span class="locker__num">090</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="fs-section">
+    <div class="fs-container">
+      <div class="fs-section__head">
+        <span class="fs-section__eyebrow">Cara kerja</span>
+        <h2>Tiga langkah, tanpa kabel data.</h2>
+      </div>
+      <div class="fs-steps">
+        <div class="fs-step">
+          <span class="fs-step__num">1</span>
+          <h3>Titipkan</h3>
+          <p>Login, lalu unggah file dari perangkat mana pun. Atur sendiri kapan file ini kadaluarsa — permanen atau custom sesuai kebutuhan.</p>
+        </div>
+        <div class="fs-step">
+          <span class="fs-step__num">2</span>
+          <h3>Tersimpan aman</h3>
+          <p>File masuk ke loker digital milikmu sendiri, terpisah dari milik pengguna lain. Hanya akunmu yang bisa membukanya.</p>
+        </div>
+        <div class="fs-step">
+          <span class="fs-step__num">3</span>
+          <h3>Ambil di mana saja</h3>
+          <p>Login dengan akun yang sama di perangkat lain — laptop, HP kedua, komputer kantor — filenya sudah menunggu untuk diunduh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fs-section" style="padding-top:0;">
+    <div class="fs-container">
+      <div class="fs-section__head">
+        <span class="fs-section__eyebrow">Kenapa FileSaver</span>
+        <h2>Dibuat sederhana, dijaga serius.</h2>
+      </div>
+      <div class="fs-features">
+        <div class="fs-feature">
+          <span class="fs-feature__label">Akses</span>
+          <h3>Lintas Perangkat</h3>
+          <p>Satu akun, semua pintu. Login di HP, laptop, atau tablet — isi lokermu tetap sama.</p>
+        </div>
+        <div class="fs-feature">
+          <span class="fs-feature__label">Keamanan</span>
+          <h3>Privat per Akun</h3>
+          <p>Row Level Security memastikan file kamu hanya bisa dibuka oleh kamu sendiri.</p>
+        </div>
+        <div class="fs-feature">
+          <span class="fs-feature__label">Kadaluarsa</span>
+          <h3>Masa Simpan Custom</h3>
+          <p>Permanen atau custom dalam hitungan hari — kamu yang tentukan kapan file otomatis dibersihkan.</p>
+        </div>
+        <div class="fs-feature">
+          <span class="fs-feature__label">Kapasitas</span>
+          <h3>Hingga 50 MB / File</h3>
+          <p>Cukup untuk dokumen, foto resolusi tinggi, atau arsip kerja harian.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fs-final-cta">
+    <div class="fs-container">
+      <h2>Loker digitalmu menunggu.</h2>
+      <p>Gratis untuk mulai. Login dari perangkat pertama sekarang.</p>
+      <a href="register.html" class="fs-btn fs-btn--brass">Daftar Sekarang</a>
+    </div>
+  </section>
+
+  <footer class="fs-footer">
+    <div class="fs-container">
+      <p>&copy; 2026 FileSaver</p>
+      <p>Dibangun dengan Supabase &amp; Vercel</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script>
+    // Sentuhan kecil: kalau sudah login, arahkan CTA nav langsung ke dashboard.
+    (async () => {
+      try {
+        const supabase = await window.FileSaver.getClient();
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session) {
+          const loginLink = document.getElementById('nav-login-link');
+          const registerLink = document.getElementById('nav-register-link');
+          loginLink.textContent = 'Dashboard';
+          loginLink.href = 'dashboard.html';
+          registerLink.remove();
+        }
+      } catch (_) { /* biarkan tampilan default kalau config gagal dimuat */ }
+    })();
+  </script>
+</body>
+</html>
