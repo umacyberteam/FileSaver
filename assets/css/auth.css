@@ -1,0 +1,101 @@
+/* ============================================================
+   FileSaver — auth.css (login, register, lupa/reset password)
+   ============================================================ */
+
+.fs-auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--ink);
+}
+
+.fs-auth-page .fs-nav { background: transparent; }
+
+.fs-auth-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 60px;
+}
+
+.fs-auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 36px 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.fs-auth-card__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass-dim);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.fs-auth-card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.fs-auth-card__sub {
+  font-size: 0.9rem;
+  margin-bottom: 26px;
+}
+
+.fs-field { margin-bottom: 18px; }
+.fs-field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-on-paper);
+  margin-bottom: 6px;
+}
+.fs-field input {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 11px 13px;
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--text-on-paper);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.fs-field input:focus {
+  border-color: var(--brass);
+  box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.18);
+  outline: none;
+}
+.fs-field__hint { font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; }
+
+.fs-auth-card form { margin-bottom: 6px; }
+
+.fs-auth-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-top: 18px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.fs-auth-links a {
+  color: var(--brass-dim);
+  text-decoration: none;
+  font-weight: 600;
+}
+.fs-auth-links a:hover { text-decoration: underline; }
+
+.fs-auth-footer-note {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.fs-auth-footer-note a { color: var(--brass-dim); font-weight: 600; text-decoration: none; }
+.fs-auth-footer-note a:hover { text-decoration: underline; }

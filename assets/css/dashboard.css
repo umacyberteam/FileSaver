@@ -1,0 +1,157 @@
+/* ============================================================
+   FileSaver — dashboard.css
+   ============================================================ */
+
+.fs-dash-header {
+  background: var(--ink);
+  padding: 18px 0;
+}
+.fs-dash-header .fs-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.fs-dash-header__user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.fs-dash-header__user-email {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-on-ink-muted);
+}
+
+.fs-dash-main { padding: 40px 0 80px; }
+
+.fs-dash-title { margin-bottom: 28px; }
+.fs-dash-title h1 { font-size: 1.6rem; margin-bottom: 6px; }
+.fs-dash-title p { font-size: 0.92rem; }
+
+/* ── Upload ─────────────────────────────────────────────────── */
+.fs-upload-panel {
+  background: #fff;
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 40px;
+}
+
+.fs-dropzone {
+  border: 2px dashed var(--paper-line);
+  border-radius: var(--radius-sm);
+  padding: 34px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.fs-dropzone:hover,
+.fs-dropzone.is-dragover {
+  border-color: var(--brass);
+  background: rgba(200, 155, 60, 0.06);
+}
+.fs-dropzone__icon {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 12px;
+  color: var(--brass-dim);
+}
+.fs-dropzone strong { display: block; font-size: 0.98rem; margin-bottom: 4px; color: var(--text-on-paper); }
+.fs-dropzone p { font-size: 0.85rem; }
+
+.fs-upload-options {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.fs-upload-options label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-on-paper);
+}
+.fs-upload-options select,
+.fs-upload-options input[type="number"] {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 9px 11px;
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--text-on-paper);
+}
+.fs-upload-options input[type="number"] { width: 90px; }
+
+#upload-progress {
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--brass-dim);
+}
+
+/* ── Daftar file ────────────────────────────────────────────── */
+.fs-list-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.fs-list-head h2 { font-size: 1.1rem; }
+.fs-list-head span { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); }
+
+.fs-file-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.fs-file-row__main { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.fs-file-row__name {
+  font-weight: 600;
+  font-size: 0.94rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fs-file-row__meta {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+.fs-file-row__actions { display: flex; gap: 8px; }
+
+.fs-badge {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.fs-badge--permanent { color: var(--tone-permanent); background: var(--tone-permanent-bg); }
+.fs-badge--ok { color: var(--tone-success); background: var(--tone-success-bg); }
+.fs-badge--soon { color: var(--tone-soon); background: var(--tone-soon-bg); }
+.fs-badge--expired { color: var(--tone-danger); background: var(--tone-danger-bg); }
+
+.fs-empty-state {
+  text-align: center;
+  padding: 50px 20px;
+  border: 1px dashed var(--paper-line);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+}
+.fs-empty-state strong { display: block; color: var(--text-on-paper); margin-bottom: 4px; }
+
+@media (max-width: 640px) {
+  .fs-file-row { grid-template-columns: 1fr; align-items: flex-start; }
+  .fs-file-row__actions { width: 100%; }
+  .fs-file-row__actions .fs-btn { flex: 1; }
+}
