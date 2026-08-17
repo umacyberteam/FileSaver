@@ -1,0 +1,65 @@
+/* ============================================================
+   FileKeep — preloader.css
+   Splash screen singkat saat halaman dibuka: logo, tagline,
+   garis progress yang jalan dari kiri ke kanan, dan counter %.
+   ============================================================ */
+
+.fs-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  padding: 20px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.fs-preloader.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.fs-preloader__brand { text-align: center; }
+.fs-preloader__logo {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 6vw, 2.2rem);
+  font-weight: 700;
+  color: var(--text-on-ink);
+  letter-spacing: -0.01em;
+}
+.fs-preloader__logo span { color: var(--brass-light); }
+.fs-preloader__tagline {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--text-on-ink-muted);
+}
+
+.fs-preloader__bar-track {
+  width: min(70vw, 280px);
+  height: 3px;
+  background: rgba(231, 235, 241, 0.14);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.fs-preloader__bar-fill {
+  height: 100%;
+  width: 1%;
+  background: linear-gradient(90deg, var(--brass-dim), var(--brass-light));
+  border-radius: 2px;
+}
+
+.fs-preloader__percent {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--brass-light);
+  letter-spacing: 0.05em;
+  min-width: 3.2em;
+  text-align: center;
+}
