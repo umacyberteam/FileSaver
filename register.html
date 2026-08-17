@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar — FileKeep</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/auth.css" />
+</head>
+<body class="fs-auth-page">
+
+  <nav class="fs-nav">
+    <div class="fs-container">
+      <a href="index.html" class="fs-nav__brand">File<span>Keep</span></a>
+    </div>
+  </nav>
+
+  <div class="fs-auth-wrap">
+    <div class="fs-auth-card">
+      <span class="fs-auth-card__eyebrow">Loker Digital</span>
+      <h1>Buat akun baru</h1>
+      <p class="fs-auth-card__sub">Satu akun untuk semua perangkatmu. Titipkan file di sini, ambil di mana saja.</p>
+
+      <form id="register-form" novalidate>
+        <div class="fs-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="nama@email.com" />
+        </div>
+        <div class="fs-field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required autocomplete="new-password" placeholder="Minimal 6 karakter" />
+        </div>
+        <div class="fs-field">
+          <label for="confirmPassword">Konfirmasi Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required autocomplete="new-password" placeholder="Ulangi password" />
+        </div>
+        <button type="submit" class="fs-btn fs-btn--brass fs-btn--block">Daftar Gratis</button>
+      </form>
+
+      <p class="fs-auth-footer-note">Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
