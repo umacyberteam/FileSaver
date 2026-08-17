@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — FileKeep</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+<body>
+
+  <header class="fs-dash-header">
+    <div class="fs-container">
+      <a href="index.html" class="fs-nav__brand">File<span>Keep</span></a>
+      <div class="fs-dash-header__user">
+        <span class="fs-dash-header__user-email" id="user-email"></span>
+        <button type="button" class="fs-btn fs-btn--outline-on-ink fs-btn--sm" id="logout-btn">Keluar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="fs-dash-main">
+    <div class="fs-container">
+
+      <div class="fs-dash-title">
+        <h1>Loker filemu</h1>
+        <p>Semua file di sini bisa kamu ambil lagi dari perangkat manapun, selama login pakai akun yang sama.</p>
+      </div>
+
+      <section class="fs-upload-panel">
+        <div class="fs-dropzone" id="dropzone">
+          <svg class="fs-dropzone__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 15V3M12 3l-4 4M12 3l4 4"/><path d="M3 15v4a2 2 0 002 2h14a2 2 0 002-2v-4"/></svg>
+          <strong>Tarik file ke sini, atau klik untuk pilih</strong>
+          <p>Maksimal 50 MB per file</p>
+          <input type="file" id="file-input" multiple style="display:none" />
+        </div>
+
+        <div class="fs-upload-options">
+          <label for="expiry-select">Simpan sampai:</label>
+          <select id="expiry-select">
+            <option value="none">Permanen</option>
+            <option value="1">1 hari</option>
+            <option value="7">7 hari</option>
+            <option value="30">30 hari</option>
+            <option value="custom">Custom…</option>
+          </select>
+
+          <div id="custom-days-wrap" class="is-hidden">
+            <label for="custom-days-input">Jumlah hari:</label>
+            <input type="number" id="custom-days-input" min="1" placeholder="mis. 14" />
+          </div>
+        </div>
+
+        <p id="upload-progress" class="is-hidden"></p>
+      </section>
+
+      <div class="fs-list-head">
+        <h2>File tersimpan</h2>
+        <span id="file-count"></span>
+      </div>
+
+      <div id="file-list"></div>
+
+      <div class="fs-empty-state is-hidden" id="empty-state">
+        <strong>Loker ini masih kosong</strong>
+        <p>Upload file pertamamu di atas — nanti bisa kamu ambil lagi dari perangkat lain.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
